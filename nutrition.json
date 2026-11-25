@@ -46,6 +46,11 @@
         "wrap",
         "yog"
       ]
+    ],
+    "focus": [
+      "everyday",
+      "recovery",
+      "strength"
     ]
   },
   {
@@ -95,6 +100,11 @@
         "wrap",
         "fruit"
       ]
+    ],
+    "focus": [
+      "energy",
+      "recovery",
+      "strength"
     ]
   },
   {
@@ -144,6 +154,10 @@
         "pasta",
         "fruit"
       ]
+    ],
+    "focus": [
+      "everyday",
+      "energy"
     ]
   },
   {
@@ -193,6 +207,12 @@
         "wrap",
         "yog"
       ]
+    ],
+    "focus": [
+      "everyday",
+      "energy",
+      "recovery",
+      "strength"
     ]
   }
 ]
