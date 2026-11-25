@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <title>My Mini App</title>
+
+    <style>
+        body {
+            background: #101522;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .card {
+            background: #242e48;
+            padding: 25px;
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+
+        button {
+            background: #527cff;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 15px;
+            width: 100%;
+            font-size: 17px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        #balance {
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>My Mini App 🚀</h1>
+    <p>Вітаю у моїй програмі!</p>
+
+    <div class="card">
+        <p>Твої бали</p>
+        <h2 id="balance">0</h2>
+
+        <button onclick="addPoint()">
+            + Додати бал
+        </button>
+
+        <button onclick="resetPoints()">
+            Скинути бали
+        </button>
+    </div>
+
+    <script>
+        const tg = window.Telegram?.WebApp;
+
+        if (tg) {
+            tg.ready();
+            tg.expand();
+        }
+
+        let points = 0;
+
+        function addPoint() {
+            points++;
+            document.getElementById("balance").textContent = points;
+        }
+
+        function resetPoints() {
+            points = 0;
+            document.getElementById("balance").textContent = points;
+        }
+    </script>
+
+</body>
+</html>
